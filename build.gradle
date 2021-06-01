@@ -52,8 +52,14 @@ apply plugin: 'com.sandec.jpro'
  * App Main Class
  */
 //mainClassName = 'com.jpro.hellojpro.HelloJPro'
-mainClassName = 'com.jpro.hellojpro.HelloJProFXML'
+mainClassName = 'com.jpro.loadbalancertest.LoadbalanderTestApp'
 
+repositories {
+  mavenCentral()
+}
+dependencies {
+  implementation "fr.brouillard.oss:cssfx:11.4.0"
+}
 /**
  * jpro settings
  */
@@ -61,7 +67,7 @@ jpro {
   // for debugging
   // JVMArgs << '-agentlib:jdwp=transport=dt_socket,server=n,address=5006,suspend=y'
 
-  JVMArgs << '-Xmx1000m'
+  JVMArgs << '-Xmx100m'
 
   //jpro server port
   port = 8080
