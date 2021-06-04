@@ -1,5 +1,6 @@
 package com.jpro.loadbalancertest;
 
+import com.jpro.webapi.WebAPI;
 import javafx.application.Application;
 import javafx.beans.property.IntegerProperty;
 import javafx.beans.property.SimpleIntegerProperty;
@@ -20,6 +21,7 @@ public class LoadbalanderTestApp extends Application {
         counter.set(counter.get() + 1);
         VBox vbox = new VBox();
         vbox.getStyleClass().add("instance-"+counter.get());
+        Label text0 = new Label("InstanceID: " + WebAPI.getWebAPI(primaryStage).getInstanceID());
         Label text1 = new Label("Current Instance: " + counter.get());
         Label text2 = new Label("Overall Instances: " + counter.get());
         text2.getStyleClass().add("overall");
@@ -29,6 +31,7 @@ public class LoadbalanderTestApp extends Application {
             text2.getStyleClass().remove("overall-" + o);
             text2.getStyleClass().add("overall-" + n);
         });
+        vbox.getChildren().add(text0);
         vbox.getChildren().add(text1);
         vbox.getChildren().add(text2);
         vbox.getChildren().add(new ProgressIndicator());
