@@ -5,6 +5,7 @@ import javafx.application.Application;
 import javafx.beans.property.IntegerProperty;
 import javafx.beans.property.SimpleIntegerProperty;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ProgressIndicator;
 import javafx.scene.layout.StackPane;
@@ -31,9 +32,18 @@ public class LoadbalanderTestApp extends Application {
             text2.getStyleClass().remove("overall-" + o);
             text2.getStyleClass().add("overall-" + n);
         });
+        Button freezeButton = new Button("freeze");
+        freezeButton.setOnAction((event) -> {
+            try {
+                Thread.sleep(5000);
+            } catch (Throwable e) {
+                e.printStackTrace();
+            }
+        });
         vbox.getChildren().add(text0);
         vbox.getChildren().add(text1);
         vbox.getChildren().add(text2);
+        vbox.getChildren().add(freezeButton);
         vbox.getChildren().add(new ProgressIndicator());
         vbox.getStylesheets().add("/com/jpro/loadbalancertest/css/HelloJPro.css");
         primaryStage.setScene(new Scene(vbox));
