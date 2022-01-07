@@ -15,11 +15,3 @@ jobs:
       - name: compile
         run: |
           ./gradlew clean jar
-      - name: logfiles
-        if: ${{ failure() }}
-        shell: bash
-        run: |
-          echo "Logfiles: "
-          ps || True
-          ls vms/server_1/LoadbalancerTest-jpro/logs || True
-          cat vms/server_1/LoadbalancerTest-jpro/logs/jpro.console.log  || True
