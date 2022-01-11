@@ -8,6 +8,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ProgressIndicator;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
@@ -46,6 +47,7 @@ public class LoadbalanderTestApp extends Application {
         vbox.getChildren().add(freezeButton);
         vbox.getChildren().add(new ProgressIndicator());
         vbox.getStylesheets().add("/com/jpro/loadbalancertest/css/HelloJPro.css");
+        vbox.getChildren().add(new ImageView("/com/jpro/loadbalancertest/image.png"));
         primaryStage.setScene(new Scene(vbox));
 
     }
