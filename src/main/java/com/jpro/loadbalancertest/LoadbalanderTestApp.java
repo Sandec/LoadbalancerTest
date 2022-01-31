@@ -33,10 +33,18 @@ public class LoadbalanderTestApp extends Application {
             text2.getStyleClass().remove("overall-" + o);
             text2.getStyleClass().add("overall-" + n);
         });
-        Button freezeButton = new Button("freeze");
-        freezeButton.setOnAction((event) -> {
+        Button sleepFX = new Button("sleep 5s");
+        sleepFX.setOnAction((event) -> {
             try {
                 Thread.sleep(5000);
+            } catch (Throwable e) {
+                e.printStackTrace();
+            }
+        });
+        Button crashFX = new Button("crash fx");
+        crashFX.setOnAction((event) -> {
+            try {
+                Thread.sleep(500000000); // basically infinite
             } catch (Throwable e) {
                 e.printStackTrace();
             }
@@ -44,7 +52,8 @@ public class LoadbalanderTestApp extends Application {
         vbox.getChildren().add(text0);
         vbox.getChildren().add(text1);
         vbox.getChildren().add(text2);
-        vbox.getChildren().add(freezeButton);
+        vbox.getChildren().add(sleepFX);
+        vbox.getChildren().add(crashFX);
         vbox.getChildren().add(new ProgressIndicator());
         vbox.getStylesheets().add("/com/jpro/loadbalancertest/css/HelloJPro.css");
         vbox.getChildren().add(new ImageView("/com/jpro/loadbalancertest/image.png"));
