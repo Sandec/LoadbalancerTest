@@ -26,6 +26,7 @@ public class LoadbalanderTestApp extends Application {
         Label text0 = new Label("InstanceID: " + WebAPI.getWebAPI(primaryStage).getInstanceID());
         Label text1 = new Label("Current Instance: " + counter.get());
         Label text2 = new Label("Overall Instances: " + counter.get());
+        Label text3 = new Label("user.home: " + System.getProperty("user.home"));
         text2.getStyleClass().add("overall");
         text2.getStyleClass().add("overall-" + counter.get());
         counter.addListener((p,o,n) -> {
@@ -49,11 +50,25 @@ public class LoadbalanderTestApp extends Application {
                 e.printStackTrace();
             }
         });
+        Button bigMessage = new Button("big message");
+        bigMessage.setOnAction((event) -> {
+            try {
+                StackPane bigbox = new StackPane();
+                for(int i = 0; i < 300; i += 1) {
+                    bigbox.getChildren().add(new Label("i: " + i));
+                }
+                vbox.getChildren().add(bigbox);
+            } catch (Throwable e) {
+                e.printStackTrace();
+            }
+        });
         vbox.getChildren().add(text0);
         vbox.getChildren().add(text1);
         vbox.getChildren().add(text2);
+        vbox.getChildren().add(text3);
         vbox.getChildren().add(sleepFX);
         vbox.getChildren().add(crashFX);
+        vbox.getChildren().add(bigMessage);
         vbox.getChildren().add(new ProgressIndicator());
         vbox.getStylesheets().add("/com/jpro/loadbalancertest/css/HelloJPro.css");
         vbox.getChildren().add(new ImageView("/com/jpro/loadbalancertest/image.png"));
