@@ -13,7 +13,7 @@ buildscript {
   }
 
   dependencies {
-    classpath 'com.sandec.jpro:jpro-plugin-gradle:2022.1.2'
+    classpath 'one.jpro:jpro-gradle-plugin:2023.1.0'
     classpath 'org.openjfx:javafx-plugin:0.0.12'
   }
 }
@@ -41,28 +41,24 @@ javafx {
 }
 
 
-
 /**
  ******************  jpro Configuration ******************
  */
-apply plugin: 'com.sandec.jpro'
-
+apply plugin: 'jpro-gradle-plugin'
 
 /**
  * App Main Class
  */
-//mainClassName = 'com.jpro.hellojpro.HelloJPro'
 mainClassName = 'com.jpro.loadbalancertest.LoadbalanderTestApp'
 
 repositories {
   mavenCentral()
 }
+
 dependencies {
-  implementation "fr.brouillard.oss:cssfx:11.5.0"
+  implementation "fr.brouillard.oss:cssfx:11.5.1"
 }
-/**
- * jpro settings
- */
+
 jpro {
   // for debugging
   // JVMArgs << '-agentlib:jdwp=transport=dt_socket,server=n,address=5006,suspend=y'
