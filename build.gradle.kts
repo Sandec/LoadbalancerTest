@@ -22,6 +22,7 @@ javafx {
  */
 application {
     mainClass.set("one.jpro.loadbalancertest.LoadbalancerTestApp")
+    mainModule.set("one.jpro.loadbalancertest")
 }
 
 repositories {
