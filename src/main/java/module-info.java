@@ -1,8 +1,8 @@
-module org.openjfx.gradle.javafx.test {
+module one.jpro.loadbalancertest {
     requires javafx.controls;
     requires javafx.fxml;
     requires jpro.webapi;
     requires fr.brouillard.oss.cssfx;
 
-    exports com.jpro.loadbalancertest;
+    exports one.jpro.loadbalancertest;
 }

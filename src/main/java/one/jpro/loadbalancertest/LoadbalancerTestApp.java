@@ -1,4 +1,4 @@
-package com.jpro.loadbalancertest;
+package one.jpro.loadbalancertest;
 
 import com.jpro.webapi.WebAPI;
 import javafx.application.Application;
@@ -13,12 +13,12 @@ import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
-public class LoadbalanderTestApp extends Application {
+public class LoadbalancerTestApp extends Application {
 
     static IntegerProperty counter = new SimpleIntegerProperty(0);
 
     @Override
-    public void start(Stage primaryStage) throws Exception {
+    public void start(Stage primaryStage) {
 
         counter.set(counter.get() + 1);
         VBox vbox = new VBox();
