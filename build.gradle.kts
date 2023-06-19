@@ -21,7 +21,7 @@ javafx {
  * App Main Class
  */
 application {
-    mainClass.set("com.jpro.loadbalancertest.LoadbalanderTestApp")
+    mainClass.set("one.jpro.loadbalancertest.LoadbalancerTestApp")
 }
 
 repositories {
@@ -33,9 +33,9 @@ dependencies {
 }
 
 jpro {
-  // for debugging
-  jvmArgs = listOf("-Xmx100m")
+    // for debugging
+    jvmArgs = listOf("-Xmx100m")
 
-  //jpro server port
-  port = 8080
+    //jpro server port
+    port = 8080
 }

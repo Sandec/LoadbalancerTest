@@ -3,6 +3,7 @@
     -fx-alignment: center;
     -fx-spacing: 16;
 }
+
 .root.instance-1 {
   -fx-background-color: lightgreen;
 }
@@ -10,9 +11,11 @@
 .label.overall {
   -fx-background-color: red;
 }
+
 .label.overall-1 {
   -fx-background-color: lightgreen;
 }
+
 .label {
     -fx-font-size: 40px;
 }
