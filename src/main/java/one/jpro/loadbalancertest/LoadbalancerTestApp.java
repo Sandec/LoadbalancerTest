@@ -70,8 +70,8 @@ public class LoadbalancerTestApp extends Application {
         vbox.getChildren().add(crashFX);
         vbox.getChildren().add(bigMessage);
         vbox.getChildren().add(new ProgressIndicator());
-        vbox.getStylesheets().add("/com/jpro/loadbalancertest/css/HelloJPro.css");
-        vbox.getChildren().add(new ImageView("/com/jpro/loadbalancertest/image.png"));
+        vbox.getStylesheets().add("/one/jpro/loadbalancertest/css/style.css");
+        vbox.getChildren().add(new ImageView("/one/jpro/loadbalancertest/image.png"));
         primaryStage.setScene(new Scene(vbox));
 
     }
