@@ -17,16 +17,9 @@ javafx {
     modules = listOf("javafx.graphics", "javafx.controls", "javafx.fxml", "javafx.media", "javafx.web")
 }
 
-/**
- * App Main Class
- */
 application {
     mainClass.set("one.jpro.loadbalancertest.LoadbalancerTestApp")
     mainModule.set("one.jpro.loadbalancertest")
-}
-
-repositories {
-    mavenCentral()
 }
 
 dependencies {
@@ -37,6 +30,6 @@ jpro {
     // for debugging
     jvmArgs = listOf("-Xmx100m")
 
-    //jpro server port
     port = 8080
+    releasePlatforms = listOf("all")
 }

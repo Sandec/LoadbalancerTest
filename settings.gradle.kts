@@ -9,7 +9,7 @@ buildscript {
     }
 
     dependencies {
-        classpath("one.jpro:jpro-gradle-plugin:2023.1.0")
+        classpath("one.jpro:jpro-gradle-plugin:2023.2.0")
     }
 }
 
