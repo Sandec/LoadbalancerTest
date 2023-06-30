@@ -1,5 +1,5 @@
 .root {
-    -fx-background-color: orange;
+    -fx-background-color: lightgreen;
     -fx-alignment: center;
     -fx-spacing: 16;
 }
@@ -9,7 +9,7 @@
 }
 
 .label.overall {
-  -fx-background-color: red;
+  -fx-background-color: orange;
 }
 
 .label.overall-1 {
